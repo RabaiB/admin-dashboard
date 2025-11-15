@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-columns: minmax(200px, 20%) 80%;
+}
+
+#sidebar {
+    background-color: blue;
+}
+
+#main-content {
+    background-color: gray;
+}
+
+#user-section {
+    display: grid;
+    grid-template-rows: minmax(200px, 20%) 80%;
+}
+
+div {
+    min-height: 500px;
+}
