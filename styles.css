@@ -13,6 +13,8 @@
 
     --gray: #dfe7f0;
     --blue: #4e42f5;
+    --orange: #FFC07F;
+    --body-color: #707070;
 
     font-size: 62.5%;
 
@@ -23,6 +25,14 @@ body {
     margin: 0px;
 
     font-size: 1.4rem;
+}
+
+body p, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+.shadow {
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.2);
 }
 
 #dashboard {
@@ -39,6 +49,7 @@ body {
     gap: var(--space-s);
     height: 100vh;
     padding: 20px;
+    font-size: var(--text-l);
 }
 
 #sidebar-logo {
@@ -103,6 +114,10 @@ body {
     gap: var(--space-s);
 }
 
+.user-info__wrapper {
+    align-items: center;
+}
+
 .welcome__text-wrapper {
     display: flex;
     flex-direction: column;
@@ -165,7 +180,7 @@ body {
     color: white;
     background-color: var(--blue);
 
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
 
     border-radius: var(--radius-xl);
@@ -175,15 +190,84 @@ body {
 }
 
 /* Header section end */
+/*======================*/
+/* Main section start */
 
 #main-content {
     background-color: var(--gray);
+    padding: var(--space-m) var(--space-s);
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-m);
 }
 
+.project__container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 
+    gap: var(--space-s);
+}
+
+.project__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--space-m);
+}
+
+.project__card {
+    background-color: white;
+    padding: var(--space-s);
+    padding-left: calc(var(--space-s) + 9px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-s);
+
+    border-radius: var(--radius-m);
+    position: relative;
+}
+
+.project__card:before {
+    position: absolute;
+    content: '';
+
+    top: 0;
+    left: 0;
+
+    width: 9px;
+    height: 100%;
+    background-color: orange;
+    border-radius: var(--radius-m) 0 0 var(--radius-m);
+}
+
+.project__card-top-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project__card-bottom-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: end;
+    gap: var(--space-s);
+}
+
+.project__card-desc {
+    color: var(--body-color);
+}
 
 #user-section {
     display: grid;
     grid-template-rows: minmax(200px, 20%) 80%;
+}
+
+.mini-sidebar__container {
+    width: 20%;
 }
 
