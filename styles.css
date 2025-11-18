@@ -1,10 +1,28 @@
 :root {
     --space-s: 20px;
     --space-xs: 8px;
+    --space-m: 30px;
+
+    --radius-m: 13px;
+    --radius-xl: 9999px;
+
+    --text-s: 1.2rem;
+    --text-m: 1.4rem;
+    --text-l: 1.6rem;
+    --text-xl: 2.4rem;
+
+    --gray: #dfe7f0;
+    --blue: #4e42f5;
+
+    font-size: 62.5%;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     margin: 0px;
+
+    font-size: 1.4rem;
 }
 
 #dashboard {
@@ -12,8 +30,10 @@ body {
     grid-template-columns: minmax(200px, 20%) 80%;
 }
 
+/* Sidebar section start */
+
 #sidebar {
-    background-color: blue;
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     gap: var(--space-s);
@@ -46,15 +66,121 @@ body {
     gap: var(--space-xs);
 
     color: white;
+    font-weight: 800;
 }
 
 .navigation__list-item p {
     margin: 0px;
 }
 
-#main-content {
-    background-color: gray;
+/* Sidebar section end */
+/*======================*/
+/* Header section start */
+
+#header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+
+    padding: 20px 40px;
 }
+
+.header__upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__bottom {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-wrapper, .user-info__wrapper, .button-wrapper, .welcome__wrapper, .header__bottom {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-s);
+}
+
+.welcome__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+
+    justify-content: center;
+}
+
+.welcome__text-wrapper p {
+    margin: 0px;
+}
+
+.welcome__text-top {
+    font-weight: 600;
+}
+
+.info__name {
+    font-size: var(--text-l);
+}
+
+.info__name, .welcome__text-bottom {
+    font-weight: 800;
+}
+
+.welcome__text-bottom {
+    font-size: var(--text-xl);
+}
+
+.info__avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.big-avatar {
+    width: 95px;
+    height: 95px;
+}
+
+.info__avatar, .big-avatar {
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+
+    -webkit-clip-path: circle(50% at 50% 50%);
+}
+
+.search-wrapper {
+    width: clamp(200px, 40%, 600px);
+}
+
+#search {
+    background-color: var(--gray);
+    border: none;
+    border-radius: var(--radius-xl);
+
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.btn {
+    color: white;
+    background-color: var(--blue);
+
+    padding: 10px 20px;
+    border: none;
+
+    border-radius: var(--radius-xl);
+
+    font-weight: 800;
+    font-size: var(--text-l);
+}
+
+/* Header section end */
+
+#main-content {
+    background-color: var(--gray);
+}
+
+
 
 #user-section {
     display: grid;
