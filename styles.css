@@ -46,9 +46,8 @@ body p, h1, h2, h3, h4, h5, h6 {
     background-color: var(--blue);
     display: flex;
     flex-direction: column;
-    gap: var(--space-s);
-    height: 100vh;
-    padding: 20px;
+    gap: var(--space-m);
+    padding: var(--space-m);
     font-size: var(--text-l);
 }
 
@@ -94,6 +93,7 @@ body p, h1, h2, h3, h4, h5, h6 {
     gap: var(--space-s);
 
     padding: 20px 40px;
+    z-index: 1;
 }
 
 .header__upper {
@@ -156,7 +156,7 @@ body p, h1, h2, h3, h4, h5, h6 {
     height: 95px;
 }
 
-.info__avatar, .big-avatar {
+.info__avatar, .big-avatar, .trending_avatar {
     object-fit: cover;
     clip-path: circle(50% at 50% 50%);
 
@@ -205,7 +205,7 @@ body p, h1, h2, h3, h4, h5, h6 {
 .project__container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 75%;
 
     gap: var(--space-s);
 }
@@ -219,8 +219,8 @@ body p, h1, h2, h3, h4, h5, h6 {
 
 .project__card {
     background-color: white;
-    padding: var(--space-s);
-    padding-left: calc(var(--space-s) + 9px);
+    padding: var(--space-m);
+    padding-left: calc(var(--space-m) + 9px);
 
     display: flex;
     flex-direction: column;
@@ -268,6 +268,77 @@ body p, h1, h2, h3, h4, h5, h6 {
 }
 
 .mini-sidebar__container {
-    width: 20%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-m);
+}
+
+.trending_avatar {
+    width: 60px;
+    height: 60px;
+}
+
+.mini-sidebar__wrapper {
+    background-color: white;
+    padding: var(--space-m);
+    border-radius: var(--radius-m);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+.announcement__text {
+    color: var(--body-color);
+    font-size: var(--text-s);
+}
+
+
+.announcement__card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    position: relative;
+    
+}
+
+.announcement__card:not(:last-child) {
+    padding-bottom: var(--space-s);
+}
+
+.announcement__card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+    background-color: var(--body-color);
+}
+
+.mini-sidebar__block {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-s);
+}
+
+.trending__card {
+    display: flex;
+    flex-direction: row;
+
+    gap: var(--space-s);
+}
+
+.trending__text-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
 }
 
